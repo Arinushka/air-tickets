@@ -1,0 +1,12 @@
+.filters {
+  display: flex;
+	flex-direction: column;
+}
+
+.filters__option {
+	margin: 0;
+}
+
+.filters__input_for_space {
+margin-bottom: 15px;
+}
