@@ -22,7 +22,7 @@ export const Filters = () => {
 			</div>
 			<h3>Авиакомпании</h3>
 			{companies.map((company)=>{
-				return <p className="filters__option"><input className="filters__input" type="checkbox" name="filters-for-airline" />{`${company.caption} от ${company.price}`}</p>
+				return <div className="filters__wrapper"><p className="filters__option"><input className="filters__input" type="checkbox" name="filters-for-airline" />{` ${company.caption}`}</p><span>от {company.price}</span></div>
 			})}
 		</fieldset>
 	);

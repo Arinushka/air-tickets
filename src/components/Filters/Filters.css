@@ -6,8 +6,16 @@
 
 .filters__option {
 	margin: 0;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+	width: 150px;
 }
 
 .filters__input_for_space {
 margin-bottom: 15px;
+}
+
+.filters__wrapper{
+	display: flex;
 }
