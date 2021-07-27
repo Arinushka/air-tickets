@@ -1,6 +1,7 @@
 .filters {
   display: flex;
 	flex-direction: column;
+	border: none;
 }
 
 .filters__option {

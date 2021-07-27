@@ -1,11 +1,12 @@
+import './Tickets.css';
 import { Ticket } from './../Ticket/Ticket';
 
 export const Tickets = () => {
 	return (
-		<div>
+		<div className="tickets">
 			<Ticket></Ticket>
 			<Ticket></Ticket>
-			<button></button>
+			<button className="tickets__button">Показать еще</button>
 		</div>
 	);
 }

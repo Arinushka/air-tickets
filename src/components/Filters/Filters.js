@@ -6,7 +6,7 @@ export const Filters = () => {
 		<fieldset className="filters">
 			<h3>Сортировать</h3>
 			<p className="filters__option"><input className="filters__input" type="radio" name="filters-for-price-and-time" id="filters-for-price-up" /> - по возрастанию цены</p>
-			<p className="filters__option"><input className="filters__input" type="radio" name="filters-for-price-and-time" /> - по убиванию цены</p>
+			<p className="filters__option"><input className="filters__input" type="radio" name="filters-for-price-and-time" /> - по убыванию цены</p>
 			<p className="filters__option"><input className="filters__input" type="radio" name="filters-for-price-and-time" /> - по времени в пути</p>
 			<h3>Фильтровать</h3>
 			<p className="filters__option"><input className="filters__input" type="checkbox" name="filters-for-transfer" /> - 1 пересадка</p>
