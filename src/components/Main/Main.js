@@ -2,11 +2,12 @@ import './Main.css';
 import { Filters } from './../Filters/Filters';
 import { Tickets } from './../Tickets/Tickets';
 
-export const Main = () => {
+export const Main = (props) => {
 	return (
 		<main className="main">
-		<Filters></Filters>
-		<Tickets></Tickets>
+			<Filters />
+			<Tickets
+			tickets={props.tickets} />
 		</main>
 	);
 }

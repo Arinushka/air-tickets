@@ -1,9 +1,21 @@
-import { Main } from './../Main/Main'
+import { Main } from './../Main/Main';
+import flights from './../../utils/flights.json';
+import React from 'react';
 
 export const App = () => {
+
+  const [tickets, setTickets] = React.useState([])
+
+  console.log(flights.result.flights)
+
+  React.useEffect(() => {
+    setTickets(flights.result.flights)
+  }, [])
+
   return (
     <div className="App">
-      <Main></Main>
+      <Main
+        tickets={tickets} />
     </div>
   );
 }

@@ -1,11 +1,15 @@
 import './Tickets.css';
 import { Ticket } from './../Ticket/Ticket';
 
-export const Tickets = () => {
+export const Tickets = (props) => {
 	return (
 		<div className="tickets">
-			<Ticket></Ticket>
-			<Ticket></Ticket>
+			{props.tickets.slice(0,2).map((ticket) => (
+				<Ticket
+					key={ticket.flightToken}
+					ticket={ticket} />
+			))}
+
 			<button className="tickets__button">Показать еще</button>
 		</div>
 	);
