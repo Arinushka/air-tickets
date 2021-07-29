@@ -7,7 +7,8 @@ export const Tickets = (props) => {
 			{props.tickets.slice(0,2).map((ticket) => (
 				<Ticket
 					key={ticket.flightToken}
-					ticket={ticket} />
+					ticket={ticket}
+					filterByAscendingPrice={props.filterByAscendingPrice} />
 			))}
 
 			<button className="tickets__button">Показать еще</button>

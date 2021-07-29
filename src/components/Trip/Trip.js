@@ -7,6 +7,16 @@ export const Trip = (props) => {
   const { arrivalCity, arrivalAirport, arrivalDate } = segments[1] || segments[0];
   const isTransfer = segments.length > 1
 
+  const handleBrokenDepartureCity = () => {
+    try { return departureCity.caption }
+    catch (exp) { return 'Данные отсутствуют' }
+  }
+
+  const handleBrokenArrivalCity = () => {
+    try { return arrivalCity.caption }
+    catch (exp) { return 'Данные отсутствуют' }
+  }
+
   const handleDuration = () => {
     if (duration <= 60) {
       return duration + ' мин'
@@ -36,8 +46,8 @@ export const Trip = (props) => {
 
   return (
     <div>
-      <h3 className="trip__direction">{`${departureCity.caption}, ${departureAirport.caption} `}<span className="trip__span">({departureAirport.uid}) &#8594; </span>
-        {`${arrivalCity.caption}, ${arrivalAirport.caption}`} <span className="trip__span">({arrivalAirport.uid})</span></h3>
+      <h3 className="trip__direction">{`${handleBrokenDepartureCity()}, ${departureAirport.caption} `}<span className="trip__span">({departureAirport.uid}) &#8594; </span>
+        {`${handleBrokenArrivalCity()}, ${arrivalAirport.caption}`} <span className="trip__span">({arrivalAirport.uid})</span></h3>
       <div className="trip__wrapper">
         <p className="trip__time">{startDate.time} <span className="trip__span">{`${startDate.date} ${startDate.day}`}</span></p>
         <p className="trip__time">&#128340; {handleDuration()}</p>
