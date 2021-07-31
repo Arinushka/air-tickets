@@ -1,3 +1,3 @@
-# Приложение для фильтров авиабилетов
+# Avia search
 
 ![https://arinushka.github.io/air-tickets/]
