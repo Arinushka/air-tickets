@@ -45,7 +45,7 @@ export const Trip = (props) => {
 
 
   return (
-    <div>
+    <div className="trip">
       <h3 className="trip__direction">{`${handleBrokenDepartureCity()}, ${departureAirport.caption} `}<span className="trip__span">({departureAirport.uid}) &#8594; </span>
         {`${handleBrokenArrivalCity()}, ${arrivalAirport.caption}`} <span className="trip__span">({arrivalAirport.uid})</span></h3>
       <div className="trip__wrapper">

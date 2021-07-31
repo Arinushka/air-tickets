@@ -5,15 +5,22 @@ import { Tickets } from './../Tickets/Tickets';
 export const Main = (props) => {
 	return (
 		<main className="main">
-			<Filters 
-			filterByAscendingPrice={props.filterByAscendingPrice}
-			filterByDescendingPrice={props.filterByDescendingPrice}
-			filterByTravelTime={props.filterByTravelTime}
-			sortByOneDirection={props.sortByOneDirection}
-			sortByDirect={props.sortByDirect}
-			filterByPrice={props.filterByPrice}/>
+			<Filters
+				filterByAscendingPrice={props.filterByAscendingPrice}
+				filterByDescendingPrice={props.filterByDescendingPrice}
+				filterByTravelTime={props.filterByTravelTime}
+				sortByOneDirection={props.sortByOneDirection}
+				sortByDirect={props.sortByDirect}
+				filterByPrice={props.filterByPrice}
+				addAirline={props.addAirline}
+				deleteAirline={props.deleteAirline}
+				sortByAirlines={props.sortByAirlines}
+				airlines={props.airlines}
+				filteredTickets={props.filteredTickets}
+				allCompanies={props.allCompanies}
+				handleAllCompanies={props.handleAllCompanies} />
 			<Tickets
-			tickets={props.tickets} />
+				tickets={props.tickets} />
 		</main>
 	);
 }
